@@ -15,6 +15,7 @@ function updateInterface(data) {
         lampada.className = "on"
     }
     lampada.textContent = data.led1;
+    console.log(data)
 }
 
 async function fetchApi() {
@@ -25,15 +26,24 @@ async function fetchApi() {
         })
 }
 
+// function post() {
+//     fetch('https://api-mqtt-seven.vercel.app/info', {
+//         method: 'POST',
+//         body: JSON.stringify({
+//             led1: "1"
+//         }),
+//         headers: {
+//             'Content-Type': 'application/json'
+//         }
+//     })
+//         .then(response => response.json())
+//         .then(data => console.log(data))
+//         .catch(error => console.log(error))
+// }
 function post() {
     fetch('https://api-mqtt-seven.vercel.app/info', {
         method: 'POST',
-        body: JSON.stringify({
-            led1: "1"
-        }),
-        headers: {
-            'Content-Type': 'application/json'
-        }
+        body: JSON.stringify({led1: '1'})  
     })
         .then(response => response.json())
         .then(data => console.log(data))
