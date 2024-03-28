@@ -58,6 +58,17 @@ body{
     gap: 3rem;
 }
 
+.cardTemp {
+    display: flex;
+    align-items: center;
+}
+
+
+.cardTemp p{
+   font-family: var(--FontPrincipal);
+   font-weight: bold;
+}
+
 @media (max-width: 768px){
 
     .menu {
