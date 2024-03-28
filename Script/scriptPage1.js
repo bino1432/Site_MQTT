@@ -6,22 +6,22 @@ function updateInterface(data) {
     const led2 = document.getElementById("led2");
     const led3 = document.getElementById("led3");
 
-    if (data.led1 === "0") {
-        led1.className = "off"
-    } else {
+    if (data.led1 === "1") {
         led1.className = "on"
+    } else {
+        led1.className = "off"
     }
 
-    if (data.led2 === "0") {
-        led2.className = "off"
-    } else {
+    if (data.led2 === "1") {
         led2.className = "on"
+    } else {
+        led2.className = "off"
     }
 
-    if (data.led3 === "0") {
-        led3.className = "off"
-    } else {
+    if (data.led3 === "1") {
         led3.className = "on"
+    } else {
+        led3.className = "off"
     }
 
     led1.textContent = data.led1;
