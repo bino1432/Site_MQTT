@@ -5,6 +5,7 @@ function updateInterface(data) {
     const led1 = document.getElementById("led1");
     const led2 = document.getElementById("led2");
     const led3 = document.getElementById("led3");
+    const tempAtl = document.getElementById("TempAtl");
 
     if (data.led1 === "1") {
         led1.className = "on"
@@ -23,11 +24,7 @@ function updateInterface(data) {
     } else {
         led3.className = "off"
     }
-
-    led1.textContent = data.led1;
-    led2.textContent = data.led2;
-    led3.textContent = data.led3;
-
+    
     console.log(data)
 }
 
