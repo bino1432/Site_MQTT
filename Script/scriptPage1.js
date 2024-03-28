@@ -5,7 +5,6 @@ function updateInterface(data) {
     const led1 = document.getElementById("led1");
     const led2 = document.getElementById("led2");
     const led3 = document.getElementById("led3");
-    const tempAtl = document.getElementById("TempAtl");
 
     if (data.led1 === "1") {
         led1.className = "on"
@@ -29,7 +28,7 @@ function updateInterface(data) {
 }
 
 async function fetchApi() {
-    return await fetch('https://api-mqtt-seven.vercel.app/info')
+    return await fetch('https://api-mqtt-seven.vercel.app/led')
         .then(response => response.json())
         .then(data => {
             updateInterface(data)
@@ -37,7 +36,7 @@ async function fetchApi() {
 }
 
 function post() {
-    fetch('https://api-mqtt-seven.vercel.app/info', {
+    fetch('https://api-mqtt-seven.vercel.app/led', {
         method: 'POST',
         body: JSON.stringify({
             led1: "1"
